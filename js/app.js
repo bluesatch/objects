@@ -193,3 +193,46 @@ console.log(orangutan);
 
 orangutan.makeSound()
 dog.makeSound()
+
+/**
+ * Create a Movie class. In the constructor add title, genre, duration, rating, cast, and any other properties you would like to add. Then write, two methods that display data from the Movie. Create three instances of the Movie class.
+ */
+
+class Movie {
+    constructor() {
+        this.title,
+        this.genre,
+        this.duration,
+        this.rating,
+        this.cast,
+        this.yearReleased,
+        this.director
+    }
+
+    getDetails() {
+        var message = `${this.title} is a ${this.genre} film from the year ${this.yearReleased}.`
+
+        console.log(message);
+        return message
+    }
+
+    showRating() {
+        var message = `${this.title} has a rating of ${this.rating}`
+
+        console.log(message);
+        return message
+    }
+}
+
+const grownUps = new Movie()
+
+grownUps.title = 'Grown Ups'
+grownUps.genre = 'comedy'
+grownUps.duration = 100
+grownUps.rating = 'PG-13'
+grownUps.cast = ['Adam Sandler', 'Chris Rock', 'Ray Liotta', 'Kevin James', 'Salma Hayek']
+grownUps.yearReleased = 2010
+grownUps.director = 'Dennis Dugan'
+
+grownUps.showRating()
+grownUps.getDetails()
